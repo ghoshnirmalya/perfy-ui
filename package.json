@@ -1,0 +1,48 @@
+{
+  "name": "ui",
+  "version": "0.0.1",
+  "author": "nirmalya.email@gmail.com",
+  "license": "MIT",
+  "scripts": {
+    "build:ant-css": "lessc --js styles/ant-overrides.less styles/ant.css",
+    "build:tailwind-css": "tailwind build styles/tailwind.css -o styles/tailwind.css -c tailwind.config.js"
+  },
+  "dependencies": {
+    "antd": "^3.23.6"
+  },
+  "devDependencies": {
+    "husky": "^3.0.8",
+    "lessc": "^1.0.2",
+    "lint-staged": "^9.4.2",
+    "prettier": "^1.18.2",
+    "tailwindcss": "^1.1.2"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
+  "lint-staged": {
+    "*.{js,json,css,md,tsx,ts}": [
+      "prettier --write",
+      "git add"
+    ]
+  },
+  "main": "tailwind.config.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/perfy-io/ui.git"
+  },
+  "keywords": [
+    "ant",
+    "design",
+    "tailwind",
+    "perfy",
+    "styleguide"
+  ],
+  "bugs": {
+    "url": "https://github.com/perfy-io/ui/issues"
+  },
+  "homepage": "https://github.com/perfy-io/ui#readme",
+  "description": ""
+}
